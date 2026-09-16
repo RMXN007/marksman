@@ -1,0 +1,6 @@
+path: C:\Users\acer\Desktop\anu project\bullet_hole_dataset
+train: images/train
+val: images/val
+
+names:
+  0: bullet_hole
