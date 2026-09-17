@@ -1,4 +1,4 @@
-path: C:\Users\acer\Desktop\anu project\bullet_hole_dataset
+path: ../backend/dataset
 train: images/train
 val: images/val
 

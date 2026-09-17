@@ -1,0 +1,35 @@
+# Python environment and cache
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+
+# Secrets
+.env
+*.secret
+
+# IDE and OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# YOLO Training Output
+backend/runs/
+runs/
+
+# Generated Inference Output
+backend/inference/outputs/
+backend/inference_outputs/
+inference_output.jpg
+*_inference.*
+*_prediction.*
+
+# Logs and Temp
+*.log
+*.tmp
