@@ -9,15 +9,10 @@ env/
 venv/
 ENV/
 
-# Secrets
-.env
-*.secret
-
-# IDE and OS
-.vscode/
-.idea/
-Thumbs.db
-.DS_Store
+# YOLO Dataset
+backend/dataset/images/
+backend/dataset/labels/
+Marksman Training Data/
 
 # YOLO Training Output
 backend/runs/
@@ -29,6 +24,16 @@ backend/inference_outputs/
 inference_output.jpg
 *_inference.*
 *_prediction.*
+
+# Secrets
+.env
+*.secret
+
+# IDE and OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
 
 # Logs and Temp
 *.log
