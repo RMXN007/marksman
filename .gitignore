@@ -1,40 +1,81 @@
-# Python environment and cache
-.venv/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-ENV/
+# ==============================================================================
+# MARKSMAN — Git Ignore Configuration (v1.0 Clean Release)
+# ==============================================================================
 
-# YOLO Dataset
+# 1. Python Environment, Virtual Environments & Cache
+.venv/
+venv/
+env/
+ENV/
+myenv/
+.Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# 2. Local IDE, Editor & Operating System Metadata
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# 3. Environment Variables, Secrets & Local Credentials
+.env
+*.env
+*.secret
+*.key
+*.pem
+*.credentials
+
+# 4. Training Datasets, Raw Images, Labels & Backups
+# Raw/processed image datasets and bounding-box text files must NOT be in GitHub
 backend/dataset/images/
 backend/dataset/labels/
+backend/dataset/checked data/
+backend/dataset/labels_heuristic_backup/
 Marksman Training Data/
+Marksman Training Data.7z
+*.7z
+*.zip
+*.tar.gz
 
-# YOLO Training Output
-backend/runs/
-runs/
+# 5. Annotation Workspaces & Audits
+project_workspace/
+launch_label_studio.bat
 
-# Generated Inference Output
+# 6. Training Checkpoints, Temporary Runs & Weights
+# Standalone untracked weights and caches
+yolov8s.pt
+weights/
+backend/training/smoke_test.py
+backend/training/resume_training.py
+
+# Bulk runs directory: ignore all runs except the primary experiment model weights
+/runs/
+backend/runs/*
+!backend/runs/experiment_01_yolov8s_640/
+backend/runs/experiment_01_yolov8s_640/*
+!backend/runs/experiment_01_yolov8s_640/weights/
+backend/runs/experiment_01_yolov8s_640/weights/*
+!backend/runs/experiment_01_yolov8s_640/weights/best.pt
+!backend/runs/experiment_01_yolov8s_640/results.csv
+
+# 7. Local Inference & Export Outputs
 backend/inference/outputs/
 backend/inference_outputs/
 inference_output.jpg
 *_inference.*
 *_prediction.*
-
-# Secrets
-.env
-*.secret
-
-# IDE and OS
-.vscode/
-.idea/
-Thumbs.db
-.DS_Store
-
-# Logs and Temp
 *.log
 *.tmp
